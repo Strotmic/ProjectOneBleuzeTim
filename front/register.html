@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="stylesheet" href="style/screen.css">
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+    <script src="script/datahandler.js"></script>
+    <script src="script/app.js"></script>
+</head>
+
+<body>
+    <!-- <header class="c-header o-layout--justify-space-between o-layout">
+        <h2 class="u-mb-clear">
+            <a class="c-nav-title" href="categories.html">
+                smart scale
+            </a>
+        </h2>
+        <nav class="o-layout u-mb-clear">
+            <ul class="o-layout o-list-reset c-nav u-mb-clear">
+                <li class="c-nav--li">
+                    <a class="c-nav--link js-goal" href="goalChange.html">Change Goal</a>
+                </li>
+                <li class="c-nav--li">
+                    <a class="c-nav--link js-goal" href="categories.html">Categories</a>
+                </li>
+                <li class="c-nav--li">
+                    <a class="c-nav--link" href="history.html">History</a>
+                </li>
+                <li class="c-nav--li">
+                    <a class="c-nav--link" href="foodTable.html">Tabel</a>
+                </li>
+            </ul>
+        </nav>
+    </header> -->
+    <header class="c-header-login">
+        <h1 class="c-header-login--title"> <a class="c-header-login--link" href="index.html">Smart Scale Register</a> </h1>
+        <!-- <a href="register.html">Register</a> -->
+    </header>
+    <main class="o-container js-register-page">
+        <form id="formElemRegister">
+            <div class="c-form"> <label for="Naam">Naam</label>
+                <input type="text" name="Naam" , id="Naam">
+            </div>
+            <div class="c-form"> <label for="VoorNaam">Voornaam</label>
+                <input type="text" name="VoorNaam" , id="VoorNaam">
+            </div>
+            <div class="c-form">
+                <label for="Email">Email:</label>
+                <input type="email" name="Email" id="Email">
+            </div>
+            <div class="c-form">
+                <label for="DailyGoal">Daily Goal:</label>
+                <select name="DailyGoal" id="DailyGoal">
+                    <option value="kcal">Kcal</option>
+                    <option value="protein">Protein</option>
+                    <option value="carboHydrates">Carbo Hydrates</option>
+                    <option value="fiber">Fiber</option>
+                    <option value="unsaturatedFat">Unsaturated Fat</option>
+                    <option value="saturatedFat">Saturated Fat</option>
+                    <option value="sugar">Sugar</option>
+                    <option value="salt">Salt</option>
+                </select>
+            </div>
+            <div class="c-form">
+                <label for="Amount">Amount:</label>
+                <input type="number" name="Amount" id="Amount" min="0">
+            </div>
+            <div class="c-form">
+                <label for="Color"></label>
+                <input type="color" name="Color" id="Color">
+            </div class="c-form">
+            <div class="c-formBtnDiv">
+
+                <input class="c-formBtn js-submit2" type="submit" value="Voeg Toe">
+            </div>
+        </form>
+        <div class="js-logout"></div>
+
+    </main>
+
+</body>
+
+</html>

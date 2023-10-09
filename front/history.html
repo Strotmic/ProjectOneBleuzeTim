@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <!-- <link rel="stylesheet" href="style/screen.css"> -->
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+    <script src="script/datahandler.js"></script>
+    <script src="script/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link rel="stylesheet" href="style/screen.css">
+</head>
+
+<body>
+    <header class="c-header">
+        <h2 class="u-mb-clear">
+            <a class="c-nav-title" href="categories.html">
+                smart scale
+            </a>
+        </h2>
+        <nav class="c-tac u-mb-clear">
+            <ul class="o-layout o-list-reset c-nav u-mb-clear">
+                <li class="c-nav--li">
+                    <a class="c-nav--link js-goal" href="goalChange.html">Change Goal</a>
+                </li>
+                <li class="c-nav--li">
+                    <a class="c-nav--link c-active js-goal" href="categories.html">Categories</a>
+                </li>
+                <li class="c-nav--li">
+                    <a class="c-nav--link--active" href="#">Overzicht</a>
+                </li>
+                <li class="c-nav--li">
+                    <a class="c-nav--link" href="foodTable.html">Tabel</a>
+                </li>
+                <li class="c-nav--li">
+                    <a class="c-nav--link js-logout" href="#">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="o-container">
+
+        <div class="c-histogram js-history"></div>
+        <h1>Taart grafiek van de dag</h1>
+        <div class="c-pie js-pie"></div>
+
+    </main>
+
+</body>
+
+</html>

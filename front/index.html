@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>index</title>
+  <link rel="stylesheet" href="style/screen.css">
+  <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+  <script src="script/datahandler.js"></script>
+  <script src="script/app.js"></script>
+</head>
+
+<body>
+  <header class="c-header-login">
+    <h1 class="c-header-login--title">Smart Scale</h1>
+    <a class="c-header-login--register" href="register.html">Klik hier om te registreren</a>
+  </header>
+  <main class="o-container">
+    <div class=" c-loginpage">
+      <div class="js-login c-login">
+        <h1 class="c-login--title">LOGIN</h1>
+        <img class="c-login--text" src="images/fingerprint.png" height="100" width="100" alt="">
+      </div>
+    </div>
+    <form id="formElemLogin">
+      <div class="c-form">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+      </div>
+      <div class="c-formBtnDiv">
+
+        <input class="c-formBtn js-submitLogin" type="submit" value="Login">
+      </div>
+    </form>
+
+  </main>
+</body>
+
+</html>

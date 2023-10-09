@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="stylesheet" href="style/screen.css">
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+    <script src="script/datahandler.js"></script>
+    <script src="script/app.js"></script>
+</head>
+
+<body>
+    <header class="c-header">
+        <h2 class="u-mb-clear">
+            <a class="c-nav-title" href="categories.html">
+                smart scale
+            </a>
+        </h2>
+        <nav class="c-tac u-mb-clear">
+            <ul class="o-layout o-list-reset c-nav u-mb-clear">
+                <li class="c-nav--li">
+                    <a class="c-nav--link js-goal" href="goalChange.html">Change Goal</a>
+                </li>
+                <li class="c-nav--li">
+                    <a class="c-nav--link c-active js-goal" href="categories.html">Categories</a>
+                </li>
+                <li class="c-nav--li">
+                    <a class="c-nav--link" href="history.html">Overzicht</a>
+                </li>
+                <li class="c-nav--li">
+                    <a class="c-nav--link" href="foodTable.html">Tabel</a>
+                </li>
+                <li class="c-nav--li">
+                    <a class="c-nav--link js-logout" href="#">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="o-container">
+        <form action="POST" id="formElem">
+            <div class="c-form">
+                <label for="iCat">Categorie</label>
+                <select name="iCat" id="iCat">
+                    <option value="1">Vlees</option>
+                    <option value="2">Vis</option>
+                    <option value="3">Groente</option>
+                    <option value="4">Fruit</option>
+                    <option value="5">Pasta</option>
+                    <option value="6">Brood</option>
+                    <option value="7">Snacks</option>
+                    <option value="8">Aanvulproducten</option>
+                </select>
+            </div>
+            <div class="c-form"> <label for="iNaam">Naam</label>
+                <input type="text" name="iNaam" , id="iNaam">
+            </div>
+            <div class="c-form">
+                <label for="iKcal">Kcal:</label>
+                <input min="0" type="number" name="iKcal" id="iKcal">
+            </div>
+            <div class="c-form">
+                <label for="iProtein">Protein:</label>
+                <input min="0" type="number" name="iProtein" id="iProtein" , step="0.1">
+            </div>
+            <div class="c-form">
+                <label for="iCarbo">Carbo Hydrates:</label>
+                <input type="number" name="iCarbo" id="iCarbo" , step="0.1">
+            </div>
+            <div class="c-form">
+                <label for="iFiber">Fiber:</label>
+                <input min="0" type="number" name="iFiber" id="iFiber" , step="0.1">
+            </div>
+            <div class="c-form">
+                <label for="iUnsat">Unsaturated Fat:</label>
+                <input min="0" type="number" name="iUnsat" id="iUnsat" , step="0.1">
+            </div>
+            <div class="c-form">
+                <label for="iSat">Saturated Fat:</label>
+                <input min="0" type="number" name="iSat" id="iSat" , step="0.1">
+            </div>
+            <div class="c-form">
+                <label for="iSugar">Sugar:</label>
+                <input min="0" type="number" name="iSugar" id="iSugar" , step="0.1">
+            </div>
+            <div class="c-form">
+                <label for="iSalt">Salt:</label>
+                <input min="0" type="number" name="iSalt" id="iSalt" , step="0.01">
+            </div>
+            <div class="c-form">
+                <label for="iServing">Serving</label>
+                <select name="iServing" id="iServing">
+                    <option value="g">Gram</option>
+                    <option value="p">/Stuk</option>
+                </select>
+            </div>
+            <div class="c-form">
+                <label for="iBarcode">Barcode</label>
+                <input type="text" name="iBarcode" id="iBarcode" pattern="\d{13}">
+            </div>
+            <div class="c-formBtnDiv">
+                <input class="c-formBtn js-submit-btn" type="submit" value="Voeg Toe">
+
+            </div>
+        </form>
+
+    </main>
+
+</body>
+
+</html>

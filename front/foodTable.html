@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="stylesheet" href="style/screen.css">
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+    <script src="script/datahandler.js"></script>
+    <script src="script/app.js"></script>
+</head>
+
+<body>
+    <header class="c-header">
+        <h2 class="u-mb-clear">
+            <a class="c-nav-title" href="categories.html">
+                smart scale
+            </a>
+        </h2>
+        <nav class="c-tac u-mb-clear">
+            <ul class="o-layout o-list-reset c-nav u-mb-clear">
+                <li class="c-nav--li">
+                    <a class="c-nav--link js-goal" href="goalChange.html">Change Goal</a>
+                </li>
+                <li class="c-nav--li">
+                    <a class="c-nav--link c-active js-goal" href="categories.html">Categories</a>
+                </li>
+                <li class="c-nav--li">
+                    <a class="c-nav--link" href="history.html">Overzicht</a>
+                </li>
+                <li class="c-nav--li">
+                    <a class="c-nav--link--active" href="#">Tabel</a>
+                </li>
+                <li class="c-nav--li">
+                    <a class="c-nav--link js-logout" href="#">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="o-container">
+        <div id="TweedePopUp" class="c-popup">
+            <div class="popup-content">
+
+                <a class="popup-content--btn" id="tare">
+                    Tare
+                </a>
+                <a class="popup-content--btn" id="weegEnVoegToe">
+                    Weeg en voeg toe
+                </a>
+                <a class="popup-content--btn closePopup">
+                    Close
+                </a>
+            </div>
+        </div>
+        <div id="EerstePopup" class="c-popup">
+            <div class="popup-content">
+                <a class="popup-content--btn" id="VoegEenToe">
+                    voeg 1 toe
+                </a>
+                <a class="popup-content--btn" id="Weeg">
+                    Wegen
+                </a>
+                <a class="popup-content--btn closePopup">
+                    Close
+                </a>
+            </div>
+        </div>
+        <div id="DerdePopup" class="c-popup">
+            <div class="popup-content">
+                <a class="popup-content--btn" id="NogIetsToevoegen">
+                    Nog iets toevoegen
+                </a>
+                <a class="popup-content--btn" id="Overzicht">
+                    Voedsel overzicht
+                </a>
+                <a class="popup-content--btn closePopup">
+                    Close
+                </a>
+            </div>
+        </div>
+        <table class="js-foodTable">
+            <tr>
+                <th>Food Name</th>
+            </tr>
+            <tr>
+                <td class="js-foodDetails" data-food=${i['foodID']}> <a href="foodDetail.html?foodID=${i.foodID}"> ${i['tblName']} </a> </td>
+            </tr>
+        </table>
+        <a href="categories.html">Terug</a>
+    </main>
+</body>
+
+</html>
